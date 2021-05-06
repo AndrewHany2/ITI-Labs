@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<html>
+<video id="video" width="500px" height="300px" controls>
+      <source src="frozen.mp4" type="video/mp4" />
+    </video>
+<div class="controls">
+    <div>
+        <input id="durationbar" type="range" min="0" step="0.1" style="width: 430px" value="0" />
+        <span style="font-size:13px;" id='durationtime'>00.00:00.00</span>
+    </div>
+    <div>
+        <i id="play" class="fa fa-play-circle" style="font-size: 15px"></i>
+        <i id="pause" class="fa fa-pause-circle" style="font-size: 15px"></i>
+        <i id="stop" class="fa fa-stop-circle" style="font-size: 15px"></i>
+        <i id='backward10' class="fa fa-backward"></i>
+        <i id='backward5' style="color:blue;" class="fa fa-step-backward" aria-hidden="true"></i>
+        <i id='forward5' style="color:blue;" class="fa fa-step-forward" aria-hidden="true"></i>
+        <i id='forward10' class="fa fa-forward"></i>
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
+        <input id="volume" type="range" min="0" max="100" step="5" />
+        <input id="mute" type="button" value="mute" />
+    </div>
+    <div>
+        <span>speed</span>
+        <input id="playbackrate" type='range' min="0" max="3" step="0.5" value='1' />
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+
+</html>
