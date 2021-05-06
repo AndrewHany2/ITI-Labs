@@ -1,0 +1,11 @@
+var url = new URL(location.href);
+var name = url.searchParams.get("name");
+var email = url.searchParams.get("email");
+var address = url.searchParams.get("address");
+var mobile = url.searchParams.get("mobile");
+var gender = url.searchParams.get("gender");
+document.getElementById("name").innerHTML = name;
+document.getElementById("address").innerHTML = address;
+document.getElementById("gender").innerHTML = gender;
+document.getElementById("email").innerHTML = email;
+document.getElementById("mobile").innerHTML = mobile;

@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="tabs">
+      <ul id="header">
+        <li>
+          <a href="#tabs-1">About</a>
+        </li>
+        <li><a href="#tabs-2">Gallery</a></li>
+        <li>
+          <a href="#tabs-3">Services</a>
+        </li>
+        <li>
+          <a href="#tabs-4">Complain</a>
+        </li>
+      </ul>
+      <div id="tabs-1">
+        <div id="tabs-1-in">
+          <span>story about snow man</span>
+        </div>
+      </div>
+      <div id="tabs-2">
+        <img src="leftarrow.png" alt="" width="2%" height="2%" />
+        <img id="img" src="snowman1.png" alt="" width="10%" />
+        <img src="rightarrow.png" alt="" width="2%" height="2%" />
+      </div>
+      <div id="tabs-3">
+        <div class="services">Item #1</div>
+        <div class="services">Item #2</div>
+        <div class="services">Item #3</div>
+      </div>
+      <div id="tabs-4">
+        <div id="tabs-4-in">
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div>
+              <label for="name">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div>
+              <label for="name">Phone</label>
+              <input type="text" name="phone" id="phone" />
+            </div>
+            <div>
+              <label for="name">Complain</label>
+              <input type="text" name="Complain" id="complain" />
+            </div>
+            <div>
+              <input type="submit" value="send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
