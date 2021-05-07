@@ -44,6 +44,9 @@ video.onloadeddata = function() {
     document.getElementById("volume").addEventListener("change", function() {
         video.volume = this.value / 100;
     });
+    document.getElementById("fullscreen").addEventListener("click", function() {
+        video.requestFullscreen();
+    });
     document.getElementById("mute").addEventListener("click", function() {
         if (this.value === "mute") {
             video.volume = 0;
