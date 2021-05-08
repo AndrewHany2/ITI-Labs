@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="modernizr.js"></script>
+    <script src="Conditionizr.js"></script>
+</head>
+<svg height="270" width="270">
+      <polygon points="200,10 200,240 100,240" style="fill: red" />
+      <text x="220" y="120" fill="black">b</text>
+      <text x="120" y="120" fill="black">c</text>
+      <text x="150" y="270" fill="black">a</text>
+    </svg>
+<p>according to pythagoras theorem</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML" style="color:red">
+<mrow>
+    <mi> c </mi>
+    <mo> = </mo>
+    <msqrt>
+        <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+            <mi>b</mi>
+            <mn>2</mn>
+        </msup>
+    </msqrt>
+</mrow>
+</math>
+<script>
+    conditionizr.add("mathmlChrome", function() {
+        return !Modernizr.mathml
+    })
+    conditionizr.polyfill("mspace.js", ["mathmlChrome"])
+</script>
+</body>
+
+</html>
