@@ -1,0 +1,280 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <style>
+        #img {
+            background: url(" images/intro_flower.png ");
+            background-repeat: no-repeat;
+        }
+        
+        #intro {
+            position: relative;
+            background: #467612 url("images/intro_background.png") repeat-x;
+            background-size: 100%;
+            border-radius: 22px;
+        }
+        
+        #intro h2,
+        #intro p {
+            position: relative;
+            z-index: 9999;
+        }
+        
+        #intro h2 {
+            font-weight: normal;
+            color: #fff;
+        }
+        
+        #intro p {
+            padding: 0;
+            color: #d9f499;
+        }
+        
+        #intro img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 70%;
+            height: 100%;
+            border-radius: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <p class='fs-2 fw-bold py-4'>The Flower Blog</p>
+    </header>
+    <nav class="px-0 px-md-5 container-fluid navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid ">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Archives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <img src="images/rss.png" alt="">
+                        <a class="nav-link d-inline-block" href="#">Subscribe via. RSS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="intro" class='container mt-5 p-4'>
+        <div class="row">
+            <header class="col-12 col-md-5">
+                <h2 class='pb-3'> Do you love flowers as much as we do?</h2>
+                <p style="font-size:smaller">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+                </p>
+            </header>
+            <img class='d-none d-md-block ' src="images/intro_flower.png" alt="Flower">
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <section>
+                    <article>
+                        <header>
+                            <p class="fs-2 fw-bold my-4">
+                                This is the title of a blog post
+                            </p>
+                            <p>
+                                Posted on June 29th 2009 by <a href="# ">Mads Kjaer</a> -
+                                <a href="#comments ">3 comments</a>
+                            </p>
+                        </header>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod tellus eu orci imperdiet nec rutrum lacus blandit. Cras enim nibh, sodales ultricies elementum vel, fermentum id tellus. Proin metus odio, ultricies eu pharetra dictum, laoreet id
+                                odio. Curabitur in odio augue. Morbi congue auctor interdum. Phasellus sit amet metus justo. Phasellus vitae tellus orci, at elementum ipsum. In in quam eget diam adipiscing condimentum. Maecenas gravida diam vitae nisi
+                                convallis vulputate quis sit amet nibh. Nullam ut velit tortor. Curabitur ut elit id nisl volutpat consectetur ac ac lorem. Quisque non elit et elit lacinia lobortis nec a velit. Sed ac nisl sed enim consequat porttitor.
+                            </p>
+                            <figure>
+                                <img src="images/flower.png " alt="Flower " />
+                                <figcaption><i>This is a beautiful flower</i></figcaption>
+                            </figure>
+                            <br />
+                            <p>
+                                Pellentesque ut sapien arcu, egestas mollis massa. Fusce lectus leo, fringilla at aliquet sit amet, volutpat non erat. Aenean molestie nibh vitae turpis venenatis vel accumsan nunc tincidunt. Suspendisse id purus vel felis auctor mattis non ac erat. Pellentesque
+                                sodales venenatis condimentum. Aliquam sit amet nibh nisi, ut pulvinar est. Sed ullamcorper nisi vel tortor volutpat eleifend. Vestibulum iaculis ullamcorper diam consectetur sagittis. Quisque vitae mauris ut elit semper
+                                condimentum varius nec nisl. Nulla tempus porttitor dolor ac eleifend. Proin vitae purus lectus, a hendrerit ipsum. Aliquam mattis lacinia risus in blandit.
+                            </p>
+                            <p>
+                                Vivamus vitae nulla dolor. Suspendisse eu lacinia justo. Vestibulum a felis ante, non aliquam leo. Aliquam eleifend, est viverra semper luctus, metus purus commodo elit, a elementum nisi lectus vel magna. Praesent faucibus leo sit amet arcu vehicula sed
+                                facilisis eros aliquet. Etiam sodales, enim sit amet mollis vestibulum, ipsum sapien accumsan lectus, eget ultricies arcu velit ut diam. Aenean fermentum luctus nulla, eu malesuada urna consequat in. Pellentesque habitant
+                                morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque massa lacus, sodales id facilisis ac, lobortis sed arcu. Donec hendrerit fringilla ligula, ac rutrum nulla bibendum id. Cras sapien ligula,
+                                tincidunt eget euismod nec, ultricies eu augue. Nulla vitae velit sollicitudin magna mattis eleifend. Nam enim justo, vulputate vitae pretium ac, rutrum at turpis. Aenean id magna neque. Sed rhoncus aliquet viverra.
+                            </p>
+                        </div>
+                    </article>
+                </section>
+                <section>
+                    <p class="fs-3 fw-bold">Comments</p>
+                    <article class="row mx-3">
+                        <header class="mt-3 col-12 col-md-4">
+                            <a class="d-block" href="#">George Washington</a> on June 29th 2009 at 23:35
+                        </header>
+                        <p class="mt-3 col-12 col-md-8">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+                        </p>
+                    </article>
+                    <article class="row mx-3 bg-light rounded-3 border border-dark">
+                        <header class="mt-3 col-12 col-md-4">
+                            <a class="d-block" href="#">Benjamin Franklin</a> on June 29th 2009 at 23:40
+                        </header>
+                        <p class="mt-3 col-12 col-md-8 pl-5">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+                        </p>
+                    </article>
+                    <article class="row mx-3">
+                        <header class="mt-3 col-12 col-md-4">
+                            <a class="d-block" href="#">Barack Obama</a> on June 29th 2009 at 23:59
+                        </header>
+                        <p class="mt-3 col-12 col-md-8">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+                        </p>
+                    </article>
+                </section>
+                <div>
+                    <p class="fs-3 fw-bold">Post a comment</p>
+                    <div class="container">
+                        <form>
+                            <div class="row mb-3">
+                                <label for="inputName3" class="col-sm-2 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="Name" class="form-control" id="inputName3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputWebsite3" class="col-sm-2 col-form-label">Website</label>
+                                <div class="col-sm-10">
+                                    <input type="Website" class="form-control" id="inputWebsite3">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputcomment3" class="col-sm-2 col-form-label">Comment</label>
+                                <div class="col-sm-10">
+                                    <input style="height: 10rem;" type="comment" class="form-control" id="inputcomment3">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="inputcomment3" class="col-sm-2 col-form-label"></label>
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary">Post comment</button>
+                                    </div>
+                                </div>
+
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside class="d-none d-lg-block col-4 border-start rounded-3">
+                <section class="m-2 rounded">
+                    <header class="mx-3">
+                        <p class="fs-5 fw-bold">Categories</p>
+                    </header>
+                    <ul class="mx-4 list-group">
+                        <li class="list-group-item border-0">Lorem ipsum dolor</li>
+                        <li class="list-group-item border-0">Sit amet consectetur</li>
+                        <li class="list-group-item border-0">Adipisicing elit sed</li>
+                        <li class="list-group-item border-0">Do eiusmod tempor</li>
+                        <li class="list-group-item border-0">Incididunt ut labore</li>
+                    </ul>
+                </section>
+                <section class="m-2 rounded">
+                    <header class="mx-3">
+                        <p class="fs-5 fw-bold">Archives</p>
+                    </header>
+                    <ul class="mx-4 list-group">
+                        <li class="list-group-item border-0">December 2008</li>
+                        <li class="list-group-item border-0">January 2009</li>
+                        <li class="list-group-item border-0">February 2009</li>
+                        <li class="list-group-item border-0">March 2009</li>
+                        <li class="list-group-item border-0">April 2009</li>
+                        <li class="list-group-item border-0">May 2009</li>
+                        <li class="list-group-item border-0">June 2009</li>
+                    </ul>
+                </section>
+            </aside>
+
+        </div>
+    </div>
+    <footer class='container-fluid p-4 bg-dark text-white '>
+        <div class="row mx-3 py-2">
+            <div class="col-12 col-md-4">
+                <section id="about">
+                    <header>
+                        <h3>About</h3>
+                    </header>
+                    <p class='px-3 text-secondary ' style="font-size:smaller">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        <a class="text-secondary" href="#">laboris nisi ut aliquip</a> ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </section>
+            </div>
+            <div class="col-12 col-md-4">
+                <section id="blogroll ">
+                    <header>
+                        <h3>Blogroll</h3>
+                    </header>
+                    <ul>
+                        <li><a class="text-secondary" style='font-size:smaller ' href="#">NETTUTS+</a></li>
+                        <li><a class="text-secondary" style='font-size:smaller ' href="#">FreelanceSwitch</a></li>
+                        <li><a class="text-secondary" style='font-size:smaller ' href="#">In The Woods</a></li>
+                        <li><a class="text-secondary" style='font-size:smaller ' href="#">Netsetter</a></li>
+                        <li><a class="text-secondary" style='font-size:smaller ' href="#">PSDTUTS+</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col-12 col-md-4">
+                <section id="popular">
+                    <header>
+                        <h3>Popular</h3>
+                    </header>
+                    <ul>
+                        <li><a class="text-secondary" style="font-size:smaller" href="#">This is the title of a blog post</a></li>
+                        <li><a class="text-secondary" style="font-size:smaller" href="#">Lorem ipsum dolor sit amet</a></li>
+                        <li>
+                            <a class="text-secondary" style="font-size:smaller" href="#">Consectetur adipisicing elit, sed do eiusmod</a>
+                        </li>
+                        <li><a class="text-secondary" style="font-size:smaller" href="#">Duis aute irure dolor</a></li>
+                        <li><a class="text-secondary" style="font-size:smaller" href="#">Excepteur sint occaecat cupidatat</a></li>
+                        <li><a class="text-secondary" style="font-size:smaller" href="#">Reprehenderit in voluptate velit</a></li>
+                        <li><a class="text-secondary" style="font-size:smaller" href="#">Officia deserunt mollit anim id est laborum</a></li>
+                        <li><a class="text-secondary" style="font-size:smaller" href="#">Lorem ipsum dolor sit amet</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

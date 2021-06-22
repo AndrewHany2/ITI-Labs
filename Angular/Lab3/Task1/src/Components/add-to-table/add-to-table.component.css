@@ -1,0 +1,36 @@
+#con {
+  width: 50%;
+  height: 50%;
+  border: 1px brown solid;
+  margin: 10px auto;
+  background-color: rosybrown;
+}
+div input {
+  display: block;
+  margin: 10px auto;
+}
+table {
+  background-color: burlywood;
+  width: 60%;
+  border-radius: 5px;
+  border: 2px black solid;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#nameValidate {
+  background-color: red;
+  border-radius: 5px;
+  width: 50%;
+  height: 30px;
+  margin: 10px auto;
+  text-align: center;
+}
+#ageValidate {
+  background-color: red;
+  border-radius: 5px;
+  width: 50%;
+  height: 30px;
+  margin: 10px auto;
+  text-align: center;
+}

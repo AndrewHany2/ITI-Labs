@@ -1,0 +1,16 @@
+<th scope="row">{{ user.id }}</th>
+<td>{{ user.name }}</td>
+<td>{{ user.phone }}</td>
+<td>{{ user.username }}</td>
+<td>{{ user.email }}</td>
+<td>{{ user.address.street }}</td>
+<td>{{ user.address.city }}</td>
+<td (click)="edit(user)">
+  <i style="color: blue" class="bi bi-pencil-square"></i>
+</td>
+<td (click)="delete(user)">
+  <i style="color: red" class="rt bi bi-trash"></i>
+</td>
+<td (click)="details(user)">
+  <i style="color: blueviolet" class="bi bi-info-square"></i>
+</td>

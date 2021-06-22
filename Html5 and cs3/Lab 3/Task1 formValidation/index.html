@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      input[type="text"]:focus {
+        border: 3px solid red;
+      }
+    </style>
+    <form name="myForm" onsubmit="return validateForm()">
+      <h1>Change Email Address</h1>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username"
+        pattern="[a-z]i"
+        required
+      />
+
+      <p id="usernameText"></p>
+      <input
+        type="text"
+        id="email"
+        name="email"
+        placeholder="email"
+        pattern="[a-z]i"
+        required
+      />
+      <p id="emailText"></p>
+      <input id="submit" type="submit" value="change" />
+    </form>
+    <script>
+      document
+        .getElementById("username")
+        .addEventListener("invalid", function (e) {
+          document.getElementById("usernameText").innerText =
+            "the required user name may be only a series of alphabetical characters";
+          document.getElementById("usernameText").style.fontSize = "10px";
+          e.preventDefault();
+        });
+      document
+        .getElementById("email")
+        .addEventListener("invalid", function (e) {
+          document.getElementById("emailText").innerText =
+            "the required email may not include any special characters other than the '@' sign";
+          document.getElementById("emailText").style.fontSize = "10px";
+          e.preventDefault();
+        });
+    </script>
+  </body>
+</html>

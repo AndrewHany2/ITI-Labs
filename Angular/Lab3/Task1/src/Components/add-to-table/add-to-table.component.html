@@ -1,0 +1,38 @@
+<div id="con">
+  <div>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      value="{{ name }}"
+      [(ngModel)]="name"
+    />
+    <div id="nameValidate" *ngIf="!ValidateName">Not Validate Name</div>
+    <input
+      type="text"
+      name="age"
+      id="age"
+      value="{{ age }}"
+      [(ngModel)]="age"
+    />
+    <div id="ageValidate" *ngIf="!ValidateAge">Not Validate Age</div>
+    <input type="button" value="addToTable" (click)="AddNewStudent()" />
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students; index as i">
+        <td>{{ i }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

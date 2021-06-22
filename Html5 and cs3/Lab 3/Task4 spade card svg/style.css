@@ -1,0 +1,62 @@
+.container {
+  width: 200px;
+  height: 300px;
+  border: 2px red solid;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first {
+  position: absolute;
+  display: inline-block;
+  top: 17px;
+  left: 19px;
+}
+.second {
+  position: absolute;
+  display: inline-block;
+  top: 282px;
+  left: 189px;
+}
+.myFont {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+.symbol {
+  position: absolute;
+  transform: scale(0.5);
+}
+#heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  transform: rotate(180deg);
+}
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+#heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+#triangle-up {
+  position: absolute;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  transform: scale(0.5);
+}

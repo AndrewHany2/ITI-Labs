@@ -1,0 +1,22 @@
+<table class="table text-center">
+  <thead>
+    <tr>
+      <th rowspan="2">ID</th>
+      <th rowspan="2">Name</th>
+      <th rowspan="2">Phone</th>
+      <th rowspan="2">Username</th>
+      <th rowspan="2">Email</th>
+      <th colspan="2">Address</th>
+      <th rowspan="2">Edit</th>
+      <th rowspan="2">Delete</th>
+      <th rowspan="2">Details</th>
+    </tr>
+    <tr>
+      <th>Street</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" app-user-item [user]="user"></tr>
+  </tbody>
+</table>

@@ -1,0 +1,36 @@
+use FacultySystemDB
+db.createCollection("student")
+db.student.insertOne({firstName:"andrew",lastName:"hany",age:"25",faculty:{name:"engineering",address:"tanta"},grades:[{courseName:"MongoDB",grade:10,pass:true}],isFired:true})
+db.student.insertOne({firstName:"andrew1",lastName:"hany1",age:"25",faculty:{name:"engineering1",address:"tanta1"},grades:[{courseName:"MongoDB1",grade:10,pass:true}],isFired:true})
+db.student.insertOne({firstName:"andrew2",lastName:"hany2",age:"25",faculty:{name:"engineering2",address:"tanta2"},grades:[{courseName:"MongoDB3",grade:10,pass:true}],isFired:true})
+db.student.insertMany([{firstName:"andrew",lastName:"hany",age:"25",faculty:{name:"engineering",address:"tanta"},grades:[{courseName:"MongoDB",grade:10,pass:true}],isFired:true},
+{firstName:"andrew1",lastName:"hany1",age:"25",faculty:{name:"engineering1",address:"tanta1"},grades:[{courseName:"MongoDB1",grade:10,pass:true}],isFired:true},
+{firstName:"andrew2",lastName:"hany2",age:"25",faculty:{name:"engineering2",address:"tanta2"},grades:[{courseName:"MongoDB3",grade:10,pass:true}],isFired:true}])
+
+db.student.find().pretty()
+db.student.findOne({firstName:"andrew"})
+db.student.find({$or:[{firstName: "andrew"}, {lastName:"hany"}]}).pretty()
+db.student.find({ firstName: { $ne: "ahmed"}}).pretty()
+db.student.find({ age: { $lt: "21"}}).pretty()
+db.student.find({ isFired: { $eq: true}}).pretty()
+db.student.find({$or:[{age:{$gte:21}}, {faculty:{$exists:true}}]}).pretty()
+db.student.findOne({$and:[{age:{$gte:21}}, {faculty:{$exists:true}}]})
+db.student.findOne({firstName:"andrew"},{firstName:1,lastName:1,isFired:1,_id:0})
+
+db.student.update({firstName:"andrew"}, {$set:{lastName:'michelle'}})
+db.student.update({firstName:"andrew"}, {$set:{lastName:'michelle'}},{multi:true})
+db.student.save({firstName:"andrew",lastName:"hany2",age:"25",faculty:{name:"engineering2",address:"tanta2"},grades:[{courseName:"MongoDB3",grade:10,pass:true}],isFired:true})
+
+db.student.deleteMany({isFired:{$eq:true}})
+db.student.drop()
+db.dropDatabase()
+
+use FacultySystemV2
+db.createCollection("student")
+db.student.insertMany([{firstName:"andrew",lastName:"hany",facultyID:"1",courses:[{couseID:"a1",grade:"10"},{couseID:"a2",grade:"10"}]},
+{firstName:"andrew1",lastName:"hany1",facultyID:"1",courses:[{couseID:"a1",grade:"10"},{couseID:"a2",grade:"10"}]},
+{firstName:"andrew2",lastName:"hany2",facultyID:"1",courses:[{couseID:"a1",grade:"10"},{couseID:"a2",grade:"10"}]}])
+db.createCollection("faculty")
+db.student.insertMany([{facultyName:"asd",address:"tanta"},{facultyName:"qweqw",address:"wqeqwq"}])
+db.createCollection("course")
+db.student.insertMany([{courseName:"asd",finalMark:10},{courseName:"asd",finalMark:10}])

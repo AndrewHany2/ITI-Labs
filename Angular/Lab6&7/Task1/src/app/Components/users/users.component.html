@@ -1,0 +1,37 @@
+<table class="table text-center">
+  <thead [appCustom]="{ bgColor: 'cyan', fontFamily: 'default' }">
+    <tr>
+      <th rowspan="2">ID</th>
+      <th rowspan="2">Name</th>
+      <th rowspan="2">Phone</th>
+      <th rowspan="2">Username</th>
+      <th rowspan="2">Email</th>
+      <th colspan="2">Address</th>
+      <th rowspan="2">More Details</th>
+    </tr>
+    <tr>
+      <th>Street</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tbody [appCustom]="{ fColor: 'red', fontFamily: 'Courier New' }">
+    <tr *ngFor="let s of users; index as i">
+      <th scope="row">{{ s.id }}</th>
+      <td>{{ s.name | upperCase }}</td>
+      <td>{{ s.phone }}</td>
+      <td>{{ s.username }}</td>
+      <td>{{ s.email }}</td>
+      <td>{{ s.address.street }}</td>
+      <td>{{ s.address.city }}</td>
+      <td>
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLinkActive="active"
+          routerLink="/users/{{ s.id }}"
+          >More Info</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a routerLink="users"> users</a>

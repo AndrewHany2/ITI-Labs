@@ -1,0 +1,10 @@
+import { Component, OnInit } from "@angular/core";
+@Component({
+  selector: "app-componentName",
+  templateUrl: "componentName.html",
+  styleUrls: ["componentName.css"],
+})
+export class componentNameComponent implements OnInit {
+  constructor() {}
+  ngOnInit() {}
+}

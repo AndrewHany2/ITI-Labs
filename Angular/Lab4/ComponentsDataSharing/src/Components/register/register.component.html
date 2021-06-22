@@ -1,0 +1,37 @@
+<form
+  [formGroup]="formGroup"
+  (validSubmit)="onSubmit()"
+  class="row g-3 needs-validation"
+  novalidate
+>
+  <div class="col-12">
+    <label for="validationCustom01" class="form-label">Full Name</label>
+    <input
+      name="name"
+      style="width: 50%"
+      type="text"
+      class="form-control col-12"
+      id="validationCustom01"
+      [(ngModel)]="name"
+      formControlName="Name"
+      required
+    />
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-12">
+    <label for="validationCustom02" class="form-label">Age</label>
+    <input
+      name="age"
+      style="width: 50%"
+      type="number"
+      class="form-control"
+      id="validationCustom02"
+      [(ngModel)]="age"
+      formControlName="Age"
+    />
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>

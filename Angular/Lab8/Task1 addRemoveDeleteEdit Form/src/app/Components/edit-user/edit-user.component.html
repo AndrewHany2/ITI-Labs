@@ -1,0 +1,103 @@
+<div *ngIf="loading; else loaded">
+  <div class="d-flex justify-content-center align-items-center">
+    <div
+      class="spinner-border"
+      style="width: 15rem; height: 15rem"
+      role="status"
+    >
+      <span class="sr-only"></span>
+    </div>
+  </div>
+  <p style="font-size: 2rem; font-weight: bold" class="text-center mt-5">
+    Loading...
+  </p>
+</div>
+<ng-template #loaded>
+  <form
+    [formGroup]="formGroup"
+    (validSubmit)="onSubmit()"
+    class="row g-3 needs-validation"
+    novalidate
+  >
+    <div class="col-12">
+      <label for="validationCustom01" class="form-label">Name</label>
+      <input
+        name="Name"
+        style="width: 50%"
+        type="text"
+        class="form-control col-12"
+        id="validationCustom01"
+        formControlName="Name"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-12">
+      <label for="validationCustom02" class="form-label">Email</label>
+      <input
+        name="Email"
+        style="width: 50%"
+        type="text"
+        class="form-control"
+        id="validationCustom02"
+        formControlName="Email"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-12">
+      <label for="validationCustom03" class="form-label">Phone</label>
+      <input
+        name="Phone"
+        style="width: 50%"
+        type="text"
+        class="form-control"
+        id="validationCustom03"
+        formControlName="Phone"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-12">
+      <label for="validationCustom04" class="form-label">Username</label>
+      <input
+        name="Username"
+        style="width: 50%"
+        type="text"
+        class="form-control"
+        id="validationCustom04"
+        formControlName="Username"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-12">
+      <label for="validationCustom06" class="form-label">Street</label>
+      <input
+        name="Street"
+        style="width: 50%"
+        type="text"
+        class="form-control"
+        id="validationCustom06"
+        formControlName="Street"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-12">
+      <label for="validationCustom07" class="form-label">City</label>
+      <input
+        name="City"
+        style="width: 50%"
+        type="text"
+        class="form-control"
+        id="validationCustom07"
+        formControlName="City"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+    <div *ngIf="submitedSuccess">
+      <div style="width: 50%" class="alert alert-success" role="alert">
+        Submitted Successfully
+      </div>
+    </div>
+  </form>
+</ng-template>
