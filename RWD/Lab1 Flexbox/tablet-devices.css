@@ -1,0 +1,20 @@
+#main > aside,
+#main > nav {
+  width: 100%;
+}
+#main > nav {
+  order: 1;
+}
+video {
+  order: 2;
+  height: 50%;
+}
+footer {
+  order: 3;
+}
+#main {
+  flex-direction: column;
+}
+article {
+  width: 100%;
+}

@@ -1,0 +1,2 @@
+style={{ display: "flex" }}
+style={{ alignSelf: "flex-start", flex: "0 0 60vw" }}

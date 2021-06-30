@@ -1,42 +1,28 @@
 import React from "react";
 import { NavLink as Link } from "react-router-dom";
-function Navbar(props) {
+import { Navbar, Container, Nav } from "react-bootstrap";
+
+function MyNavbar(props) {
   return (
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <Link class="navbar-brand" to="/">
-            Users
-          </Link>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/">
-                  Home
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/register">
-                  Register
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+    <Navbar bg="dark" expand="lg" variant="dark">
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          Users
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/register">
+              Register
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default MyNavbar;

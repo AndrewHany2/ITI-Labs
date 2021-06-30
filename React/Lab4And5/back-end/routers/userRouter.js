@@ -32,10 +32,10 @@ const upload = multer({
 });
 
 userRouter.post("/register", upload.single("userImage"), async (req, res) => {
-  const { name, age } = req.body;
+  const { name, email } = req.body;
   const userImage = req.file.path;
   try {
-    const user = new User({ name, age, userImage });
+    const user = new User({ name, email, userImage });
     const savedUser = await user.save();
     res.status(201).json(savedUser);
   } catch (error) {
@@ -43,19 +43,49 @@ userRouter.post("/register", upload.single("userImage"), async (req, res) => {
   }
 });
 
-userRouter.get("/:name", async (req, res) => {
-  const { name } = req.params;
-  const user = await User.findOne({ name: name });
+userRouter.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  const user = await User.findOne({ _id: id });
   if (user) {
     res.status(200).json(user);
-  } else res.status(404).send("user not found, invalid name");
+  } else res.status(404).send("user not found, invalid id");
 });
 
 userRouter.get("/", async (req, res) => {
-  const user = await User.find({});
-  if (user) {
-    res.status(200).json(user);
+  const users = await User.find({});
+  if (users) {
+    res.status(200).json(users);
   } else res.status(404).send("user not found, invalid name");
+});
+
+userRouter.delete("/:id", async (req, res) => {
+  const id = req.params.id;
+  User.deleteOne({ _id: id })
+    .then((result) => {
+      res.status(200).json({ result: result });
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
+userRouter.put("/:id", upload.single("userImage"), async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const user = await User.findOne({ _id: id });
+    const name = req.body.name || user.name;
+    const email = req.body.email || user.email;
+    const userImage = req.file ? req.file.path : user.userImage;
+    user.name = name;
+    user.email = email;
+    user.userImage = userImage;
+    const response = await user.save();
+    if (response) {
+      res.status(200).json({ response: response });
+    }
+  } catch (e) {
+    next(e);
+  }
 });
 
 module.exports = userRouter;

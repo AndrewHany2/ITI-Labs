@@ -1,0 +1,30 @@
+.HeaderFooter {
+    width: 100%;
+    background-color: gray;
+    color: hotpink;
+    text-align: center;
+    height: 30px;
+}
+
+#LeftSide {
+    width: 20%;
+    background-color: indigo;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#CenterSide {
+    width: 60%;
+    background-color: lightgreen;
+}
+
+#RightSide {
+    width: 20%;
+    background-color: lightseagreen;
+}
+
+span {
+    float: left;
+    height: 800px;
+}
