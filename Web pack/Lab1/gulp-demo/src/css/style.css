@@ -1,0 +1,17 @@
+/* ---------  GLOBAL STYLES  --------- */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-attachment: fixed;
+}
+.testcss {
+  color: red;
+  width: 50%;
+  height: 50%;
+  background-color: cyan;
+}
